@@ -1,19 +1,18 @@
 import java.util.Scanner;
-// Base class
 abstract class Shape
 {
 double dimention1;
 double dimention2;
-// Method to input data
+
 public void inputData(double d1, double d2)
 {
 this.dimention1 = d1;
 this.dimention2 = d2;
 }
-// Abstract method to compute area
+
 public abstract double compute_area();
 }
-// Derived class for Triangle
+
 class Triangle extends Shape
 {
 public double compute_area()
@@ -21,7 +20,7 @@ public double compute_area()
 return 0.5 *dimention1 * dimention2; // Area = 0.5 * base * height
 }
 }
-// Derived class for Rectangle
+
 class Rectangle extends Shape
 {
 public double compute_area()
