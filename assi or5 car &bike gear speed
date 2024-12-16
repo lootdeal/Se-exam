@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-interface vehicle {		//vehicle interface
+interface vehicle {	
 	void gear_change(int a);		
 	void speed_up();
 	void apply_brakes();
@@ -14,16 +14,16 @@ class bicycle implements vehicle
 {
 	int gear,speed;
 	
-	bicycle()			//default constructor for bicycle
+	bicycle()		
 	{
 		System.out.println("\tBicycle started successfully\n ");
-		gear=1;			//gear is 1 when Cycle starts
-		speed=10;		//speed is 10 when Cycle Starts
+		gear=1;		
+		speed=10;	
 	}
 	
 	public void gear_change(int gearex)
 	{
-		if(gearex<7 && gearex>0)		//maximum gear for vehicle is 6
+		if(gearex<7 && gearex>0)		
 		{
 			gear=gearex;
 			System.out.println("\tGear changed Successfully \n\t Current Gear Is "+gear);
@@ -34,7 +34,7 @@ class bicycle implements vehicle
 	
 	public void speed_up()			
 	{
-		if((speed+5)<50 ) {		//50 as maximum speed
+		if((speed+5)<50 ) {		
 			speed+=5;
 			System.out.println("\n\tBicycles speed increased \n\t current speed is "+speed);
 		}
@@ -50,9 +50,9 @@ class bicycle implements vehicle
 		x=sc.nextInt();
 		
 		if(x==1)
-			if((speed-5)>0)			// speed never be negative
+			if((speed-5)>0)		
 			{
-				speed-=5;			//per apply brakes bicycles speed is reduced by 5
+				speed-=5;		
 				System.out.println("Speed Reduced Successfull \n\tCurrent speed is "+speed+" Kmhr \n");
 			}
 			else {
@@ -60,7 +60,7 @@ class bicycle implements vehicle
 				gear=0;
 				System.out.println("Bicycle stopped Successfully\n ");}
 				
-		if(x==2)			//to stop bicycle 
+		if(x==2)			
 		{
 			speed=0;
 			gear=0;
@@ -69,7 +69,7 @@ class bicycle implements vehicle
 		
 	}
 	
-	public void display()		//displays current status of bicycle
+	public void display()	
 	{
 		System.out.println("YOUR  BICYCLE'S SPEED IS "+speed +" Kmhr AND GEAR IS "+gear);
 	}
@@ -86,12 +86,12 @@ class car implements vehicle
 	car()
 	{
 		System.out.println("\tCar started successfully\n ");
-		gear=1;			//speed when car started
-		speed=10;		//gear when car started
+		gear=1;			
+		speed=10;		
 	}
 	public void gear_change(int gearex)
 	{
-		if(gearex<7 && gearex >0)	//maximum gear is 6
+		if(gearex<7 && gearex >0)	
 		{
 			this.gear=gearex;
 			System.out.println("\tGear changed Successfully \n\t Current Gear is "+gear);
