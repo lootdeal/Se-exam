@@ -52,17 +52,17 @@ System.out.println("Calculated area of Triangle is : " + area);
 }
 else if (ch == 2)
 {
-}
-else
-{
-}
-}
-}
 System.out.println("Enter length and width of the rectangle:");
 double d1 = sc.nextDouble();
 double d2 = sc.nextDouble();
 rectangle.inputData(d1,d2);
 double area = rectangle.compute_area();
 System.out.println("Calculated area of Rectangle is: " + area);
+}
+else{
 System.out.println("Invalid choice!");
 return;
+}
+    
+}
+}
